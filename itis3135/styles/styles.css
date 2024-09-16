@@ -29,12 +29,6 @@ footer
     background-color: lightgray;
 }
 
-section[name="links"]
-{
-    display: block;
-    text-align: center;
-}
-
 a:visited
 {
     color: #88A0A8
