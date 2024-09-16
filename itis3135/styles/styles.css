@@ -1,0 +1,51 @@
+body
+{
+    background-color: #FAD4D8;
+    color: #546A76;
+}
+
+header
+{
+    display: block;
+    text-align: center;
+    padding: 15px;
+    border: #88A0A8 solid 5px;
+    background-color: #FAD4D8;
+}
+
+main
+{
+    background-color: #FAD4D8;
+    color: #517C50
+}
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #517C50;
+    margin-top: 30px;
+    background-color: lightgray;
+}
+
+section[name="links"]
+{
+    display: block;
+    text-align: center;
+}
+
+a:visited
+{
+    color: #88A0A8
+}
+
+a:hover
+{
+    color: #fbf7f5
+}
+
+a:active
+{
+    color: #fbf7f5
+}
