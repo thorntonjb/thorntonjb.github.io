@@ -1,3 +1,8 @@
+:root
+{
+    --green: #517C50;
+}
+
 body
 {
     background-color: #FAD4D8;
@@ -16,7 +21,7 @@ header
 main
 {
     background-color: #FAD4D8;
-    color: #517C50
+    color: var(--green);
 }
 
 footer
@@ -24,7 +29,7 @@ footer
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: #517C50;
+    color: var(--green);
     margin-top: 30px;
     background-color: lightgray;
 }
@@ -60,4 +65,41 @@ img
 footer p
 {
     margin: 4px;
+}
+
+table, th, td
+{
+    border: 3px solid var(--green);
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+td
+{
+    padding: 25px;
+    text-align: center;
+    vertical-align: center;
+}
+
+figure
+{
+    margin-left: 0px;
+}
+
+figure table tr:nth-child(odd)
+{
+    background-color: lightgrey;
+}
+
+figure table tr:first-of-type
+{
+    background-color: lightsalmon;
+}
+
+.category
+{
+    background-color: #FAD4D8;
 }
