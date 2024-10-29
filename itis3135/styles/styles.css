@@ -1,11 +1,12 @@
 :root
 {
     --green: #517C50;
+    --pink: #FAD4D8;
 }
 
 body
 {
-    background-color: #FAD4D8;
+    background-color: var(--pink);
     color: #546A76;
 }
 
@@ -15,13 +16,14 @@ header
     text-align: center;
     padding: 15px;
     border: #88A0A8 solid 5px;
-    background-color: #FAD4D8;
+    background-color: var(--pink);
 }
 
 main
 {
-    background-color: #FAD4D8;
+    background-color: var(--pink);
     color: var(--green);
+    font-size: 25px;
 }
 
 footer
@@ -101,5 +103,49 @@ figure table tr:first-of-type
 
 .category
 {
-    background-color: #FAD4D8;
+    background-color: var(--pink);
+}
+
+form input:nth-of-type(-n+3)
+{
+    background-color: var(--pink);
+    border: 0px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
+/* MOBILE RULES */
+/* Remove Initial */
+html, body {
+    all:initial;
+    background-color: var(--pink);
+}
+/* Foundational Three */
+main {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+/* Rule Overrides For Laptops / Small Screens */
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    #colorbox {
+        background-color: var(--pink);
+    }
+}
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    #colorbox {
+        background-color: var(--pink);
+    }
+}
+/* Rule Overrides For Mobile Devices */
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    #colorbox {
+        background-color: var(--pink);
+    }
 }
