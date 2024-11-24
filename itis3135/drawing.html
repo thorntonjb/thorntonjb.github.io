@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jaunty Theriocephalus || ITIS3135 DRAWING WITH P5</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <style>
+            main
+            {
+                width: 95%;
+                margin: 0 auto;
+                max-width: 1200px;
+            }
+            /* Rule Overrides For Laptops / Small Screens */
+            @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+                #colorbox {
+                    background-color: var(--lavender);
+                }
+            }
+            /* Rule Overrides For Tablet Devices */
+            @media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+                #colorbox {
+                    background-color: var(--lavender);
+                }
+            }
+            /* Rule Overrides For Mobile Devices */
+            @media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+                #colorbox {
+                    background-color: var(--lavender);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div data-include="./components/header.html"></div>
+        </header>
+
+        <main>
+
+        </main>
+
+        <footer>
+            <div data-include="./components/footer.html"></div>
+        </footer>
+
+        <script src="scripts/include.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
+        <script src="scripts/sketch.js"></script>
+    </body>
+</html>

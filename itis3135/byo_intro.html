@@ -10,45 +10,67 @@
             main {
                 font-size: 16px;
             }
+
             form {
                 display: flex;
                 flex-direction: column;
                 max-width: 50%;
-                justify-content: center;
             }
+
+            section label {
+                justify-content: left;
+            }
+
             form section {
                 display: flex;
                 flex-direction: row;
+                justify-content: right;
                 margin: 10px 0px;
             }
-            input:not([type='checkbox'], [type='file']) {
-                border: 1px solid black !important;
-                background-color: white !important;
+            input:not([type='checkbox']):not([type='file']) {
+                border-bottom: 1px solid black;
+                background-color: white;
                 width: 400px;
             }
 
-            input:not([type='checkbox'], [type='text'], [type='file']):hover {
-                border: 1px solid black !important;
-                background-color: var(--pink) !important;
+            input:not([type='checkbox']):not([type='text']):not([type='file']):hover {
+                border-bottom: 1px solid black;
+                background-color: var(--pink);
                 width: 400px;
             }
 
-            input:is([type='submit'], [type='reset']){
+            [type='submit'], [type='reset'] {
                 background-color: white;
                 border: 3px solid black;
-            }
-
-            input:is([type='submit'], [type='reset']) {
                 background-color: pink;
             }
 
-            p {
-                margin: 6px;
-                width: 250px;
-            }
             textarea {
                 width: 400px;
                 height: 65px;
+            }
+
+            #user-intro {
+                font-size: 30px;
+            }
+
+            /* Rule Overrides For Laptops / Small Screens */
+            @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+                #colorbox {
+                    background-color: var(--lavender);
+                }
+            }
+            /* Rule Overrides For Tablet Devices */
+            @media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+                #colorbox {
+                    background-color: var(--lavender);
+                }
+            }
+            /* Rule Overrides For Mobile Devices */
+            @media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+                #colorbox {
+                    background-color: var(--lavender);
+                }
             }
         </style>
     </head>
@@ -59,86 +81,87 @@
 
         <main>
             <h2 class="unity">INTRODUCTION FORM FOR ITIS3135 SITE</h2>
-
             <h3>Time for a BYO Intro page -  please fill out the form below so we can create your own page.</h3>
-            <form>
+
+            <form id="intro-form" autocomplete="off">
                 <section>
-                    <p>Name:</p>
-                    <input type="text" placeholder="John" id="name">
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="John" id="name" >
                 </section>
 
                 <section>
-                    <p>Mascot:</p>
+                    <label for="mascot">Mascot:</label>
                     <input type="text" placeholder="Jaunty Thericephalus" id="mascot">
                 </section>
 
                 <section>
-                    <p>File Upload:</p>
-                    <input type="file" id="intro-image" required>
-                    <button type="button" id="load-image">LOAD IMAGE</button>
+                    <label for="intro-image">File Upload:</label>
+                    <input type="file" id="intro-image">
+                    <!-- <button type="button" id="load-image">LOAD IMAGE</button> -->
                 </section>
                 <section>
-                    <p>Image Caption:</p>
-                    <input type="text" placeholder="Jaunty Thericephalus" id="caption">
+                    <label for="caption">Image Caption:</label>
+                    <input type="text" placeholder="The best thing in the world!" id="caption">
                 </section>
 
                 <section>
-                    <p>Personal Background:</p>
+                    <label for="personal">Personal Background:</label>
                     <textarea placeholder="Grew up in Raleigh area" id="personal"></textarea>
                 </section>
 
                 <section>
-                    <p>Professional Background:</p>
+                    <label for="professional">Professional Background:</label>
                     <textarea placeholder="Currently have an internship lined up for the summer" id="professional"></textarea>
                 </section>
 
                 <section>
-                    <p>Academic Background:</p>
+                    <label for="academic">Academic Background:</label>
                     <textarea placeholder="Third year CS student" id="academic"></textarea>
                 </section>
 
                 <section>
-                    <p>Web Dev Background:</p>
+                    <label for="web-dev">Web Dev Background:</label>
                     <textarea placeholder="Multiple landing pages created through Odin Project" id="web-dev"></textarea>
                 </section>
 
                 <section>
-                    <p>Platform:</p>
+                    <label for="platform">Platform:</label>
                     <input type="text" placeholder="MacOS" id="platform">
                 </section>
 
-                <section>
-                    <p>Current Classes:</p>
-                    <input type="text" placeholder="Class #1" id="classes">
+                <section id="class-section">
+                    <label for="classes">Current Classes:</label>
+                    <input type="text" placeholder="Class" id="classes">
                     <button id="new-class" type="button">Add</button>
                 </section>
 
                 <section>
-                    <p>Funny Fact:</p>
+                    <label for="funny">Funny Fact:</label>
                     <input type="text" placeholder="I used to play superheroes at recess" id="funny">
                 </section>
 
                 <section>
-                    <p>Additional Info:</p>
+                    <label for="additional">Additional Info:</label>
                     <input type="text" placeholder="I have strong metabolism" id="additional">
                 </section>
 
                 <section>
-                    <input type="checkbox">
-                    <p>"I understand that what is on this page is not password protected and I will not put
-                        anything here that I don’t want publicly available."</p>
+                    <input type="checkbox" required>
+                    <p>I understand that what is on this page is not password protected and I will not put
+                        anything here that I don’t want publicly available.</p>
                 </section>
 
                 <section>
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit" id="submit">
+                    <input type="reset" value="Reset" id="reset">
                 </section>
 
             </form>
 
-            <section id="user-intro">
-
+            <section id="intro-result">
             </section>
+
+            <button id="reset-page">Reset Everything!</button>
         </main>
 
         <footer>
