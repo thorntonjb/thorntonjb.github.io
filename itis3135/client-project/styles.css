@@ -35,3 +35,9 @@ nav button {
 nav button:hover {
     text-decoration: underline;
 }
+
+img
+{
+    max-width: 25%;
+    max-height: 25%;
+}
