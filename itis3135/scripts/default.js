@@ -19,14 +19,7 @@ const insultUserButton = document.getElementById("insult-user");
 const luckyButton = document.getElementById("lucky");
 const jauntyButton = document.getElementById("jaunty");
 const currentChangeHeading = document.getElementById("change");
-// const htmlValidator = document.getElementById("html");
-// const cssValidator = document.getElementById("css");
-// const aimValidator = document.getElementById("aim");
 let isJaunty = false;
-
-function scriptTest() {
-  alert("Hey, my script is running!");
-}
 
 // Determine the day of the week upon program start
 switch (dayOfWeek) {
@@ -213,25 +206,3 @@ jauntyButton.addEventListener('click', function feelingJaunty() {
 
   isJaunty = !isJaunty;
 });
-
-// Function to validate HTML
-function validateHTML() {
-  const currentURL = encodeURIComponent(window.location.href);
-  window.open(`https://validator.w3.org/nu/?doc=${currentURL}`, "_blank");
-}
-
-// Function to validate CSS
-function validateCSS() {
-  const currentURL = encodeURIComponent(window.location.href);
-  window.open(`https://jigsaw.w3.org/css-validator/validator?uri=${currentURL}&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en`, "_blank");
-}
-
-// Function to validate AIM (Accessibility, SEO, and Mobile-friendliness)
-function validateAIM() {
-  // Replace the URL with the tool you prefer for accessibility, SEO, and mobile-friendliness validation
-  window.open("https://www.google.com/webmasters/tools/mobile-friendly/", "_blank");
-}
-
-// htmlValidator.addEventListener('click', validateHTML());
-// cssValidator.addEventListener('click', validateCSS());
-// aimValidator.addEventListener('click', validateAIM());
