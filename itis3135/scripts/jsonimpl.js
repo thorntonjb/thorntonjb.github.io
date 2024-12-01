@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       console.log(data);
       console.log(navHeader);
+      
       data.forEach((post) => {
         navHeader.insertAdjacentHTML('beforeend', `<a href="${post.link}"><button >${post.text}</button></a>`);
       });

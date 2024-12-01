@@ -4,8 +4,12 @@
     "link": "../index.html"
   },
   {
-    "text": "Introduction ❣",
+    "text": "Class Page ❣",
     "link": "./index.html"
+  },
+  {
+    "text": "Introduction ❣",
+    "link": "./introduction.html"
   },
   {
     "text": "Class Contract ❣",
@@ -46,5 +50,17 @@
   {
     "text": "Client Project ❣",
     "link": "./client-project/index.html"
+  },
+  {
+    "text": "Site Review 1 ❣",
+    "link": "./review1.html"
+  },
+  {
+    "text": "Site Review 2 ❣",
+    "link": "./review2.html"
+  },
+  {
+    "text": "cRaPP",
+    "link": "./stuff/wEIR(d.htm"
   }
 ]
