@@ -20,7 +20,7 @@
                 height: auto;
             }
 
-            * {
+            html {
               box-sizing: border-box;
             }
 
@@ -40,7 +40,7 @@
             }
 
             /* Next & previous buttons */
-            .prev,
+            /* .prev,
             .next {
               cursor: pointer;
               position: absolute;
@@ -54,7 +54,9 @@
               border-radius: 0 3px 3px 0;
               user-select: none;
               -webkit-user-select: none;
-            }
+              -moz-user-select: none;
+              -ms-user-select: none;
+            } */
 
             /* Position the "next button" to the right */
             .next {
@@ -122,67 +124,67 @@
                 <!-- Full-width images with number text -->
                 <div class="slideshow">
                   <div class="numbertext">1 / 12</div>
-                    <img src="./images/jacket.jpeg">
+                    <img src="./images/jacket.jpeg" alt="Jacket">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">2 / 12</div>
-                    <img src="./images/ocean.JPG">
+                    <img src="./images/ocean.JPG" alt="Ocean">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">3 / 12</div>
-                    <img src="./images/hand.JPG">
+                    <img src="./images/hand.JPG" alt="Hand">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">4 / 12</div>
-                    <img src="./images/night.JPG">
+                    <img src="./images/night.JPG" alt="Night">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">5 / 12</div>
-                    <img src="./images/turtle.PNG">
+                    <img src="./images/turtle.PNG" alt="Turtle">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">6 / 12</div>
-                    <img src="./images/hamburger.jpeg">
+                    <img src="./images/hamburger.jpeg" alt="Hamburger">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">7 / 12</div>
-                    <img src="./images/ocean.jpeg">
+                    <img src="./images/ocean.jpeg" alt="Ocean">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">8 / 12</div>
-                    <img src="./images/rug.JPG">
+                    <img src="./images/rug.JPG" alt="Rug">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">9 / 12</div>
-                    <img src="./images/nature.jpg">
+                    <img src="./images/nature.jpg" alt="Nature">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">10 / 12</div>
-                    <img src="./images/tasty.JPG">
+                    <img src="./images/tasty.JPG" alt="Tasty">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">11 / 12</div>
-                    <img src="./images/organization.PNG">
+                    <img src="./images/organization.PNG" alt="Organization">
                 </div>
 
                 <div class="slideshow">
                   <div class="numbertext">12 / 12</div>
-                    <img src="./images/nutrition.PNG">
+                    <img src="./images/nutrition.PNG" alt="Nutrition">
                 </div>
 
               <!-- Next and previous buttons -->
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              <a id="prev">&#10094;</a>
+              <a id="next">&#10095;</a>
 
               <!-- Image text -->
               <div class="caption-container">
@@ -210,22 +212,22 @@
                   <img class="demo cursor" src="./images/hamburger.jpeg" onclick="currentSlide(6)" alt="H - Hamburger">
                 </div>
                 <div class="column">
-                  <img class="demo cursor" src="./images/ocean.jpeg" onclick="currentSlide(1)" alt="O - Ocean with beach">
+                  <img class="demo cursor" src="./images/ocean.jpeg" onclick="currentSlide(7)" alt="O - Ocean with beach">
                 </div>
                 <div class="column">
-                  <img class="demo cursor" src="./images/rug.JPG" onclick="currentSlide(2)" alt="R - Rug">
+                  <img class="demo cursor" src="./images/rug.JPG" onclick="currentSlide(8)" alt="R - Rug">
                 </div>
                 <div class="column">
-                  <img class="demo cursor" src="./images/nature.jpg" onclick="currentSlide(3)" alt="N - Nature">
+                  <img class="demo cursor" src="./images/nature.jpg" onclick="currentSlide(9)" alt="N - Nature">
                 </div>
                 <div class="column">
-                  <img class="demo cursor" src="./images/tasty.JPG" onclick="currentSlide(4)" alt="T - Tasty sando">
+                  <img class="demo cursor" src="./images/tasty.JPG" onclick="currentSlide(10)" alt="T - Tasty sando">
                 </div>
                 <div class="column">
-                  <img class="demo cursor" src="./images/organization.PNG" onclick="currentSlide(5)" alt="O - Organization through Niner Engage">
+                  <img class="demo cursor" src="./images/organization.PNG" onclick="currentSlide(11)" alt="O - Organization through Niner Engage">
                 </div>
                 <div class="column">
-                  <img class="demo cursor" src="./images/nutrition.PNG" onclick="currentSlide(6)" alt="N - Nutrition label">
+                  <img class="demo cursor" src="./images/nutrition.PNG" onclick="currentSlide(12)" alt="N - Nutrition label">
                 </div>
               </div>
             </div>

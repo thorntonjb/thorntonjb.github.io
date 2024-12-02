@@ -1,3 +1,26 @@
+const body = document.querySelector("body");
+
+
+body.addEventListener('click', (event) => {
+  const sparkle = document.createElement("div");
+  sparkle.classList.add("spark");
+  body.appendChild(sparkle);
+
+  sparkle.style.top = (event.clientY - body.offsetTop) + 'px';
+  sparkle.style.left = (event.clientX - body.offsetLeft) + 'px';
+  sparkle.style.filter = "hue-rotate(" + Math.random() * 360 + "deg)"
+
+  for (let i = 0; i <= 7; i++) {
+    let span = document.createElement("span");
+    span.style.transform = "rotate(" + (i * 45) + "deg)";
+    sparkle.appendChild(span);
+  }
+
+  setTimeout(() => {
+    sparkle.remove();
+  }, 1000);
+});
+
 const slideImages = document.getElementsByClassName("demo");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
@@ -36,7 +59,6 @@ function showSlides(n) {
   {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-
 
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
