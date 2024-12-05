@@ -174,3 +174,11 @@ img
 .demo:hover {
   opacity: 1;
 }
+
+#footernav
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
