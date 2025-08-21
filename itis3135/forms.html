@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jaunty Theriocephalus || ITIS3135 FORMS</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <style>
+            body main
+            {
+                justify-items: center;
+                font-size: 20px;
+                font-family: Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            h2
+            {
+                font-size: 60px;
+            }
+            h3
+            {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 40px;
+            }
+
+            @font-face
+            {
+                font-family: 'Bernoru';
+                src: url(./itis3135/components/bernoru-blackultraexpanded.otf);
+            }
+
+            button[type="submit"],
+            button[type="reset"] {
+                background-color: navy;
+                color: snow;
+                border: 0px;
+                border-radius: 5px;
+                padding: 5px
+            }
+
+            section
+            {
+                border: 5px solid snow;
+                padding: 10px 25px;
+                margin: 15px 0px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>JOHN THORNTON IN ITIS3135</h1>
+            <nav id="headernav"></nav>
+        </header>
+
+        <main>
+            <h2>ITIS3135 FORMS</h2>
+            <p>This is showcasing all my skills with HTML forms</p>
+
+            <form autocomplete="off" action="#">
+                <section>
+                    <label for="name">Name -&gt;</label>
+                    <input type="text" placeholder="Full Name" id="name" required><br>
+
+                    <label for="name">Phone Number -&gt;</label>
+                    <input type="number" placeholder="Phone Number" required><br>
+
+                    <label for="name">Email -&gt;</label>
+                    <input type="email" placeholder="Email" required><br>
+                </section>
+
+                <section>
+                    <h3>Which electric vehicles would you use? </h3>
+                    <input type="checkbox" id="ev1" value="Rivian">
+                    <label for="ev1">Rivian</label><br>
+
+                    <input type="checkbox" id="ev2" value="Tesla">
+                    <label for="ev2">Tesla</label><br>
+
+                    <input type="checkbox" id="ev3" value="Lucid">
+                    <label for="ev3">Lucid</label><br>
+                </section>
+
+                <section>
+                    <h3>What is your main furniture store?</h3>
+                    <input type="radio" id="st1" value="IKEA" checked>
+                    <label for="st1">IKEA</label><br>
+
+                    <input type="radio" id="st2" value="HomeGoods">
+                    <label for="st2">HomeGoods</label><br>
+
+                    <input type="radio" id="st3" value="World Market">
+                    <label for="st3">WorldMarket</label><br>
+
+                    <h3>Where would you like to live?</h3>
+                    <select>
+                        <option>Choose one</option>
+                        <option>Apartment</option>
+                        <option>Townhouse</option>
+                        <option>House</option>
+                    </select><br><br>
+                </section>
+
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </form>
+
+
+        </main>
+
+        <footer>
+            <div data-include="./components/footer.html"></div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./scripts/jsonimpl.js"></script>
+        <script src="scripts/include.js"></script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Client | Interact</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div data-include="./components/header.html"></div>
+        </header>
+
+        <main>
+            <h1>Let's Interact with this Webpage!</h1>
+
+            <!-- Container for the image gallery -->
+            <div class="image-gallery">
+                <!-- J O H N T H O R N T O N -->
+              <!-- Full-width images with number text -->
+              <div class="slideshow">
+                <div class="numbertext">1 / 6</div>
+                  <img src="./images/barca-1.jpg"">
+              </div>
+
+              <div class="slideshow">
+                <div class="numbertext">2 / 6</div>
+                  <img src="./images/madrid-1.jpg">
+              </div>
+
+              <div class="slideshow">
+                <div class="numbertext">3 / 6</div>
+                  <img src="./images/barca-2.jpg">
+              </div>
+
+              <div class="slideshow">
+                <div class="numbertext">4 / 6</div>
+                  <img src="./images/madrid-2.jpeg">
+              </div>
+
+              <div class="slideshow">
+                <div class="numbertext">5 / 6</div>
+                  <img src="./images/barca-3.jpg">
+              </div>
+
+              <div class="slideshow">
+                <div class="numbertext">6 / 6</div>
+                  <img src="./images/madrid-3.jpg">
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a id="prev">&#10094;</a>
+              <a id="next">&#10095;</a>
+
+              <!-- Image text -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <!-- Thumbnail images -->
+              <div class="row">
+                <div class="column">
+                  <img class="demo cursor" src="./images/barca-1.jpg" onclick="currentSlide(1)" alt="Barcelona 1">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="./images/madrid-1.jpg" onclick="currentSlide(2)" alt="Madrid 1">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="./images/barca-2.jpg" onclick="currentSlide(3)" alt="Barcelona 2">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="./images/madrid-2.jpeg" onclick="currentSlide(4)" alt="Madrid 2">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="./images/barca-3.jpg" onclick="currentSlide(5)" alt="Barcelona 3">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="./images/madrid-3.jpg" onclick="currentSlide(6)" alt="Madrid 3">
+                </div>
+              </div>
+            </div>
+        </main>
+
+        <footer>
+            <div data-include="./components/footer.html"></div>
+        </footer>
+
+        <script src="scripts/interact.js"></script>
+        <script src="scripts/include.js"></script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jaunty Theriocephalus || ITIS3135 FIRST SCRIPTS</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <style>
+            h3
+            {
+                display: flex;
+                font-size: 55px;
+                justify-content: center;
+            }
+            input
+            {
+                width: 65px;
+            }
+        </style>
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <h1>JOHN THORNTON IN ITIS3135</h1>
+            <nav id="headernav"></nav>
+        </header>
+
+        <main>
+            <h2 class="unity">FIRST SCRIPTS FOR ITIS3135 SITE</h2>
+
+            <h3 id="time" class="unity"></h3>
+
+            <input id="name" type="text" placeholder="Name" required>
+            <input id="feeling" type="text" placeholder="Feeling" required>
+            <button id="display" class="unity">Display!</button>
+            <h3 id="welcome" class="unity"></h3>
+
+            <input type="number" placeholder="Polygons" id="polygon" max="10" min="-10" required>
+            <button id="alert" class="unity">Alert the polygon!</button>
+            <br><br>
+
+            <button id="insult-animal" class="unity">Insult the Theriocephalus!</button>
+            <button id="insult-user" class="unity">Insult Yourself!</button>
+            <button id="lucky" class="unity">Feeling Lucky?</button>
+            <button id="jaunty" class="unity">Feeling Jaunty?</button>
+            <h3 id="change" class="unity"></h3>
+
+            <h4 class="unity">Jaunty Theriocephalus Storefront (now with buttons!)</h4>
+
+        </main>
+
+        <footer>
+            <div data-include="./components/footer.html"></div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script async src="scripts/default.js" defer></script>
+        <script src="./scripts/jsonimpl.js"></script>
+        <script src="scripts/include.js"></script>
+    </body>
+</html>

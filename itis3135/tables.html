@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jaunty Theriocephalus || ITIS3135 TABLES</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>JOHN THORNTON IN ITIS3135</h1>
+            <nav id="headernav"></nav>
+        </header>
+
+        <main>
+            <h2>ITIS3135 TABLES</h2>
+            <p>This is showcasing all my skills with HTML tables</p>
+
+            <h3>Tabular Data</h3>
+            <ol>
+                <li>Remy rems@ratataurant.com 2</li>
+                <li>Linguini lings@ratataurant.com 2</li>
+                <li>Anton Ego egos@ratataurant.com 30</li>
+                <li>Colette cols@ratataurant.com 5</li>
+                <li>Gusteau gusts@ratataurant.com 50</li>
+                <li>Emile emis@ratataurant.com 1</li>
+                <li>Mustafa musts@ratataurant.com 8</li>
+            </ol>
+
+            <h3>Emplyoee Data in Simple Table</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Years of Service</th>
+                </tr>
+                <tr>
+                    <td>Remy</td>
+                    <td>rems@ratataurant.com</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Linguini</td>
+                    <td>lings@ratataurant.com</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Anton Ego</td>
+                    <td>egos@ratataurant.com</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Colette</td>
+                    <td>cols@ratataurant.com</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Gusteau</td>
+                    <td>gusts@ratataurant.com</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Emile</td>
+                    <td>emis@ratataurant.com</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Mustafa</td>
+                    <td>musts@ratataurant.com</td>
+                    <td>8</td>
+                </tr>
+            </table>
+
+            <h3>Emplyoee Data in Complex Table</h3>
+            <figure>
+                <table>
+                    <tr>
+                        <!-- <th id="blank" rowspan="10">&nbsp;</th> -->
+                        <th id="co1" >Category</th>
+                        <th id="co2" >Name</th>
+                        <th id="co3" >Email</th>
+                        <th id="co4" >Years of Service</th>
+                        <th id="co5" >Salary</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" class="category" headers="co1">Cook</td>
+                        <td headers="co2">Remy</td>
+                        <td headers="co3">rems@ratataurant.com</td>
+                        <td headers="co4">2</td>
+                        <td headers="co5">$100</td>
+                    </tr>
+                    <tr>
+                        <td class="name" headers="co2">Linguini</td>
+                        <td headers="co3">lings@ratataurant.com</td>
+                        <td headers="co4">2</td>
+                        <td headers="co5">$4,000</td>
+                    </tr>
+                    <tr>
+                        <td headers="co2">Colette</td>
+                        <td headers="co3">cols@ratataurant.com</td>
+                        <td headers="co4">5</td>
+                        <td headers="co5">$5,500</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="category" headers="co1">Critic</td>
+                        <td class="name" headers="co2">Anton Ego</td>
+                        <td headers="co3">egos@ratataurant.com</td>
+                        <td headers="co4">30</td>
+                        <td headers="co5">$10,000</td>
+                    </tr>
+                    <tr>
+                        <td headers="co2">Emile</td>
+                        <td headers="co3">emis@ratataurant.com</td>
+                        <td headers="co4">1</td>
+                        <td headers="co5">$50</td>
+                    </tr>
+                    <tr>
+                        <td class="category" headers="co1">Server</td>
+                        <td class="name" headers="co2">Mustafa</td>
+                        <td headers="co3">musts@ratataurant.com</td>
+                        <td headers="co4">8</td>
+                        <td headers="co5">$3,450</td>
+                    </tr>
+                    <tr>
+                        <td headers="co1">Owner</td>
+                        <td headers="co2">Gusteau</td>
+                        <td headers="co3">gusts@ratataurant.com</td>
+                        <td headers="co4">50</td>
+                        <td headers="co5">$30,000</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3" class="name" headers="co1">Totals</th>
+                        <td class="name" headers="co4">48</td>
+                        <td class="name" headers="co5">$53,100</td>
+                    </tr>
+                </table>
+                <figcaption>Employee Information</figcaption>
+            </figure>
+
+
+        </main>
+
+        <footer>
+            <div data-include="./components/footer.html"></div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./scripts/jsonimpl.js"></script>
+        <script src="scripts/include.js"></script>
+    </body>
+</html>
