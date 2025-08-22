@@ -3,6 +3,8 @@
 //   // Fetch JSON data
 //   const navHeader = document.getElementById("headernav");
 
+const { Children } = require("react");
+
 //   fetch("./components/navbar.json")
 //     .then((response) => response.json())
 //     .then((data) => {
@@ -24,7 +26,7 @@ $.ajax({
   url: './components/navbar.json',
   success: function (response) {
     pageArray = response;
-
+    
     response.forEach((post) => {
       navHeader.insertAdjacentHTML('beforeend', `<a href="${post.link}"><button >${post.text}</button></a>`);
     });
