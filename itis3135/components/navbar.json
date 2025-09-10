@@ -1,70 +1,70 @@
 [
-  {
-    "text": "Home Webpage ❣",
-    "link": "../index.html"
-  },
-  {
-    "text": "Class Page ❣",
-    "link": "./index.html"
-  },
-  {
-    "text": "Introduction ❣",
-    "link": "./introduction.html"
-  },
-  {
-    "text": "Class Contract ❣",
-    "link": "./contract.html"
-  },
-  {
-    "text": "About the Company ❣",
-    "link": "./about.html"
-  },
-  {
-    "text": "Website Evals ❣",
-    "link": "./website_evaluations.html"
-  },
-  {
-    "text": "Tables ❣",
-    "link": "./tables.html"
-  },
-  {
-    "text": "Forms ❣",
-    "link": "./forms.html"
-  },
-  {
-    "text": "Project Overview ❣",
-    "link": "./project_overview.html"
-  },
-  {
-    "text": "First Scripts ❣",
-    "link": "./firstscripts.html"
-  },
-  {
-    "text": "Introduction Form ❣",
-    "link": "./introduction.html"
-  },
-  {
-    "text": "Drawing with p5 ❣",
-    "link": "./drawing.html"
-  },
-  {
-    "text": "Client Project ❣",
-    "link": "./client-project/index.html"
-  },
-  {
-    "text": "Site Review 1 ❣",
-    "link": "./review1.html"
-  },
-  {
-    "text": "Site Review 2 ❣",
-    "link": "./review2.html"
-  },
-  {
-    "text": "Slideshow ❣",
-    "link": "./slideshow.html"
-  },
-  {
-    "text": "cRaPP",
-    "link": "./stuff/wEIR(d.htm"
-  }
+	{
+		"text": "Home Webpage ❣",
+		"link": "../index.html"
+	},
+	{
+		"text": "Class Page ❣",
+		"link": "./index.html"
+	},
+	{
+		"text": "Introduction ❣",
+		"link": "./introduction.html"
+	},
+	{
+		"text": "Class Contract ❣",
+		"link": "./contract.html"
+	},
+	{
+		"text": "About the Company ❣",
+		"link": "./about.html"
+	},
+	{
+		"text": "Website Evals ❣",
+		"link": "./website_evaluations.html"
+	},
+	{
+		"text": "Tables ❣",
+		"link": "./tables.html"
+	},
+	{
+		"text": "Forms ❣",
+		"link": "./forms.html"
+	},
+	{
+		"text": "Project Overview ❣",
+		"link": "./project_overview.html"
+	},
+	{
+		"text": "First Scripts ❣",
+		"link": "./firstscripts.html"
+	},
+	{
+		"text": "Introduction Form ❣",
+		"link": "./introduction.html"
+	},
+	{
+		"text": "Drawing with p5 ❣",
+		"link": "./drawing.html"
+	},
+	{
+		"text": "Client Project ❣",
+		"link": "./client-project/index.html"
+	},
+	{
+		"text": "Site Review 1 ❣",
+		"link": "./review1.html"
+	},
+	{
+		"text": "Site Review 2 ❣",
+		"link": "./review2.html"
+	},
+	{
+		"text": "Slideshow ❣",
+		"link": "./slideshow.html"
+	},
+	{
+		"text": "cRaPP",
+		"link": "./stuff/wEIR(d.htm"
+	}
 ]
