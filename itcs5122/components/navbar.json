@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Class Home",
+		"path": "./index.html"
+	},
+	{
+		"name": "About Me",
+		"path": "./aboutme.html"
+	},
+	{
+		"name": "Charting with Code",
+		"path": "./project1.html"
+	}
+]
