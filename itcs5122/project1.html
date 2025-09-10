@@ -11,11 +11,33 @@
 		</header>
 
 		<main>
+            <a href="https://colab.research.google.com/drive/1ejbuSSdFw9wI2xUtnysaNJs2w9JTKJzg?usp=sharing">Google CoLab</a>
+            <a href="https://www.kaggle.com/datasets/jarredpriester/california-avocado-production-19802020/data">Dataset</a>
 			<h2>Avocado Growth in California Over 40 Years</h2>
 			<p>
 				Avocado growth in California is not something that California is necessarily known for. However, all avocados need is a hot climate to grow.
 			</p>
 
+            <h3>Preprocessing</h3>
+			<code>
+                <pre>
+                    avocados_df = pd.read_csv('./cali_avocados.csv')
+                    avocados_df.drop([' Commodity Code', ' County Code'],axis=1,inplace=True)
+
+                    avocados_df.rename(columns=lambda name: name.strip(), inplace=True)
+                    avocados_df['Unit'] = avocados_df['Unit'].apply(lambda unit: "Tons")
+                    feature_names = avocados_df.columns
+                    print(f'Feature Names: {feature_names.values}')
+
+
+                    for feature in feature_names.values : 
+                        avocados_df[feature] = avocados_df[feature].apply(lambda name: str(name).strip())
+                        avocados_df.replace('', 0, inplace=True)
+                        if feature in ['Year','Harvested Acres', 'Yield', 'Production', 'Price P/U', 'Value'] :
+                            avocados_df[feature] = avocados_df[feature].apply(lambda number: float(number))
+			</code>
+
+            <h3>Graphs & Storytelling</h3>
 			<img src="./images/california-yields.png" alt="Line plot of Yields of California Avocado Farms between 1980 and 2020" />
 			<p>The graph above shows a general upward trend in Avocado yields over 40 years. These are measured in tons.</p>
 
