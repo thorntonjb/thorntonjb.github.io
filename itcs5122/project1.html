@@ -5,10 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Charting with Code</title>
 		<style>
-			main {
+			main,
+			header,
+			footer {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 				font-size: large;
-				justify-self: center;
-				align-self: center;
 			}
 
 			h1 {
@@ -29,11 +33,24 @@
 			p {
 				justify-self: left;
 			}
+
+			pre code {
+				display: block;
+				background: #23272e;
+				color: #f8f8f2;
+				font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+				font-size: 1em;
+				padding: 1em;
+				border-radius: 8px;
+				overflow-x: auto;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+			}
 		</style>
 	</head>
 	<body>
 		<header>
 			<h1>Visual Analytics, Project 1</h1>
+			<nav id="navbar"></nav>
 		</header>
 
 		<main>
@@ -45,39 +62,42 @@
 			</p>
 
 			<h3>Preprocessing</h3>
-			<code>
-				<pre>
-                    avocados_df = pd.read_csv('./cali_avocados.csv')
-                    avocados_df.drop([' Commodity Code', ' County Code'],axis=1,inplace=True)
-
-                    avocados_df.rename(columns=lambda name: name.strip(), inplace=True)
-                    avocados_df['Unit'] = avocados_df['Unit'].apply(lambda unit: "Tons")
-                    feature_names = avocados_df.columns
-                    print(f'Feature Names: {feature_names.values}')
+			<pre> <code>
+avocados_df.rename(columns=lambda name: name.strip(), inplace=True)
+avocados_df['Unit'] = avocados_df['Unit'].apply(lambda unit: "Tons")
+avocados_df['Year'] = avocados_df['Year'].apply(lambda year: int(year))
+feature_names = avocados_df.columns
+print(f'Feature Names: {feature_names.values}')
 
 
-                    for feature in feature_names.values : 
-                        avocados_df[feature] = avocados_df[feature].apply(lambda name: str(name).strip())
-                        avocados_df.replace('', 0, inplace=True)
-                        if feature in ['Year','Harvested Acres', 'Yield', 'Production', 'Price P/U', 'Value'] :
-                            avocados_df[feature] = avocados_df[feature].apply(lambda number: float(number))
-                </pre
-				>
-			</code>
+for feature in feature_names.values : 
+    avocados_df[feature] = avocados_df[feature].apply(lambda name: str(name).strip())
+    avocados_df.replace('', 0, inplace=True)
+    avocados_df.replace('San Luis Obisp', 'San Luis Obispo', inplace=True)
+    if feature in ['Harvested Acres', 'Yield', 'Production', 'Price P/U', 'Value'] :
+        avocados_df[feature] = avocados_df[feature].apply(lambda number: float(number))
+			</code></pre>
 
 			<h3>Graphs & Storytelling</h3>
-			<img src="./images/california-yields.png" alt="Line plot of Yields of California Avocado Farms between 1980 and 2020" />
+			<img src="./images/california_yields.png" alt="Line plot of Yields of California Avocado Farms between 1980 and 2020" />
 			<p>The graph above shows a general upward trend in Avocado yields over 40 years. These are measured in tons.</p>
 
-			<img src="./images/california-produced.png" alt="Line plot of number of avocados produced in California between 1980 and 2020" />
+			<img src="./images/california_produced.png" alt="Line plot of number of avocados produced in California between 1980 and 2020" />
 			<p>With this graph, we only see a slight upward trend (and even some stagnance) in avocado production across all California counties.</p>
 			<p>What does this mean with our data? It may mean that our avocados are getting denser. There's <strong>more</strong> avocado per avocado</p>
 			<p>
 				Though the trend of avocado production seems stagnant, you can still see the relevance between the two features. Spikes and dips correlate
 				between the two plots.
 			</p>
+
+			<img src="./images/north_cali.png" alt="Avocado Production line graph in Northern California" />
+			<img src="./images/central_cali.png" alt="Avocado Production line graph in Central California" />
+			<img src="./images/south_cali.png" alt="Avocado Production line graph in Southern California" />
 		</main>
 
 		<footer></footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="./scripts/implement_json.js"></script>
 	</body>
 </html>

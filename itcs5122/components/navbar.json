@@ -1,14 +1,14 @@
 [
 	{
 		"name": "Class Home",
-		"path": "../index.html"
+		"path": "./index.html"
 	},
 	{
 		"name": "About Me",
-		"path": "../aboutme.html"
+		"path": "./aboutme.html"
 	},
 	{
 		"name": "Charting with Code",
-		"path": "../project1.html"
+		"path": "./project1.html"
 	}
 ]
