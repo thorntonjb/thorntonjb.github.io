@@ -4,6 +4,32 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Charting with Code</title>
+		<style>
+			main {
+				font-size: large;
+				justify-self: center;
+				align-self: center;
+			}
+
+			h1 {
+				justify-self: center;
+				font-size: 100px;
+			}
+
+			h2 {
+				justify-self: left;
+				font-size: 45px;
+			}
+
+			h3 {
+				justify-self: left;
+				font-size: 25px;
+			}
+
+			p {
+				justify-self: left;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -11,16 +37,16 @@
 		</header>
 
 		<main>
-            <a href="https://colab.research.google.com/drive/1ejbuSSdFw9wI2xUtnysaNJs2w9JTKJzg?usp=sharing">Google CoLab</a>
-            <a href="https://www.kaggle.com/datasets/jarredpriester/california-avocado-production-19802020/data">Dataset</a>
+			<a href="https://colab.research.google.com/drive/1ejbuSSdFw9wI2xUtnysaNJs2w9JTKJzg?usp=sharing">Google CoLab</a>
+			<a href="https://www.kaggle.com/datasets/jarredpriester/california-avocado-production-19802020/data">Dataset</a>
 			<h2>Avocado Growth in California Over 40 Years</h2>
 			<p>
 				Avocado growth in California is not something that California is necessarily known for. However, all avocados need is a hot climate to grow.
 			</p>
 
-            <h3>Preprocessing</h3>
+			<h3>Preprocessing</h3>
 			<code>
-                <pre>
+				<pre>
                     avocados_df = pd.read_csv('./cali_avocados.csv')
                     avocados_df.drop([' Commodity Code', ' County Code'],axis=1,inplace=True)
 
@@ -35,9 +61,11 @@
                         avocados_df.replace('', 0, inplace=True)
                         if feature in ['Year','Harvested Acres', 'Yield', 'Production', 'Price P/U', 'Value'] :
                             avocados_df[feature] = avocados_df[feature].apply(lambda number: float(number))
+                </pre
+				>
 			</code>
 
-            <h3>Graphs & Storytelling</h3>
+			<h3>Graphs & Storytelling</h3>
 			<img src="./images/california-yields.png" alt="Line plot of Yields of California Avocado Farms between 1980 and 2020" />
 			<p>The graph above shows a general upward trend in Avocado yields over 40 years. These are measured in tons.</p>
 
