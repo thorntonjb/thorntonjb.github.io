@@ -4,48 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Charting with Code</title>
-		<style>
-			main,
-			header,
-			footer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				font-size: large;
-			}
-
-			h1 {
-				justify-self: center;
-				font-size: 100px;
-			}
-
-			h2 {
-				justify-self: left;
-				font-size: 45px;
-			}
-
-			h3 {
-				justify-self: left;
-				font-size: 25px;
-			}
-
-			p {
-				justify-self: left;
-			}
-
-			pre code {
-				display: block;
-				background: #23272e;
-				color: #f8f8f2;
-				font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
-				font-size: 1em;
-				padding: 1em;
-				border-radius: 8px;
-				overflow-x: auto;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-			}
-		</style>
+		<link rel="stylesheet" href="./styles/styles.css" />
 	</head>
 	<body>
 		<header>
@@ -59,9 +18,24 @@
 			<h2>Avocado Growth in California Over 40 Years</h2>
 			<p>
 				Avocado growth in California is not something that California is necessarily known for. However, all avocados need is a hot climate to grow.
+				In this report, we explore avocado yield and production in California. We also see some interesting results when we split up California into
+				three geographical parts. Since California is so large, it's climate is quite variable across the state (i.e. the Southern part is hotter and
+				probably more sustainable for avocado farming than the Northern part.)
 			</p>
 
-			<h3>Preprocessing</h3>
+			<p>
+				<strong>A few questions I wanted to answer are below:</strong>
+				<ul>
+					<li>How does yield change over 40 years? Production?</li>
+					<li>What is the relationship between yield and production? Are avocados getting denser over time? Can they get denser?</li>
+					<li>Has the price per ton of avocados changed over 40 years? Initial answer is yes due to inflation, but what does this actually look like?</li>
+					<li>What counties have produced avocados over 40 years? What counties haven't?</li>
+					<li>What does missing data mean?</li>
+				</ul>
+				
+			</p>
+
+			<!-- <h3>Preprocessing</h3>
 			<pre> <code>
 avocados_df.rename(columns=lambda name: name.strip(), inplace=True)
 avocados_df['Unit'] = avocados_df['Unit'].apply(lambda unit: "Tons")
@@ -76,9 +50,9 @@ for feature in feature_names.values :
     avocados_df.replace('San Luis Obisp', 'San Luis Obispo', inplace=True)
     if feature in ['Harvested Acres', 'Yield', 'Production', 'Price P/U', 'Value'] :
         avocados_df[feature] = avocados_df[feature].apply(lambda number: float(number))
-			</code></pre>
+			</code></pre> -->
 
-			<h3>Graphs & Storytelling</h3>
+			<h3>General Data</h3>
 			<img src="./images/california_yields.png" alt="Line plot of Yields of California Avocado Farms between 1980 and 2020" />
 			<p>The graph above shows a general upward trend in Avocado yields over 40 years. These are measured in tons.</p>
 
@@ -89,10 +63,28 @@ for feature in feature_names.values :
 				Though the trend of avocado production seems stagnant, you can still see the relevance between the two features. Spikes and dips correlate
 				between the two plots.
 			</p>
-
+			<!-- <p>
+				Though the trend of avocado production seems stagnant, you can still see the relevance between the two features. Spikes and dips correlate
+				between the two plots. When yields increase, production often follows, and vice versa. This suggests that factors affecting avocado growth
+				impact both the quantity produced and the yield per acre. Below, we'll break up California Avocado production by geographical location and
+				County.
+			</p> -->
+			<h3>Geographic Splits</h3>
 			<img src="./images/north_cali.png" alt="Avocado Production line graph in Northern California" />
+			<p>Here, we see data for 3 counties in Northern California. Here's the thing with avocados: they need a hotter and wetter climate.</p>
+			<p>Out of the 3 counties, only Monterey has kept up production for all 40 years and reached a maximum of over 1400 avocados.</p>
 			<img src="./images/central_cali.png" alt="Avocado Production line graph in Central California" />
+			<p>
+				We're looking a little better with Central California, though not every county here has data. San Luis Obispo appears to be the only county
+				with data for all 40 years. The maximum number of avocados produced is higher in Central California than in Northern California -- it's
+				getting hotter!
+			</p>
 			<img src="./images/south_cali.png" alt="Avocado Production line graph in Southern California" />
+			<p>
+				Finally, we're in SoCal! We see data for 8 California counties here that immediately beat the production levels of the Northern and Central
+				counties. Our maxmimum number of avocados produced reached over 160,000 around 1985. Although there is a downtrend decade-over-decade, the
+				Southern part of the state still produces far more avocados.
+			</p>
 		</main>
 
 		<footer></footer>
