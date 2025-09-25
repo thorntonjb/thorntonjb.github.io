@@ -41,3 +41,11 @@ In the grand scheme of things (and for my first project with visualization), eve
 ## Code
 
 Running `main.ipynb` in VS Code (with `cali_avocados.csv` in the same directory) under a Python Environment will get you the results that I have found.
+
+## References
+
+- Google Gemini used to polish styles of Portfolio page.
+- Intermediate Data Visualization with Seaborn course on [DataCamp](https://app.datacamp.com/learn/courses/intermediate-data-visualization-with-seaborn).
+- Avocado data from [Kaggle](https://www.kaggle.com/datasets/jarredpriester/california-avocado-production-19802020/data) 
+- [Seaborn docs](https://seaborn.pydata.org/api.html) 
+- [Python docs](https://docs.python.org/3/library/index.html) 
