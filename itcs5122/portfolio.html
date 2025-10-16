@@ -8,99 +8,85 @@
 	</head>
 	<body>
 		<header>
-			<h1>Visual Analytics, Project 1</h1>
+			<h1>Visual Analytics, Project 2</h1>
 			<nav id="navbar"></nav>
 		</header>
 
 		<main>
 			<!-- <a href="https://colab.research.google.com/drive/1ejbuSSdFw9wI2xUtnysaNJs2w9JTKJzg?usp=sharing">Google CoLab</a>
 			<a href="https://www.kaggle.com/datasets/jarredpriester/california-avocado-production-19802020/data">Dataset</a> -->
-			<h2>Dashboard</h2>
-			<h2>2025 Stack Overflow Survey Results & Visualization</h2>
+			<h2>Portfolio Post</h2>
+            <h2>Avocado Growth in California Over 40 Years</h2>
 			<p>
-				The Stack Overflow Developer Survey is an annual survey that gets information on developers from around the world. Results are available to
-				the public. This dashboard was created using that data.
+				Avocado growth in California is not something that California is necessarily known for. However, all avocados need is a hot climate to grow.
+				In this report, we explore avocado yield and production in California. We also see some interesting results when we split up California into
+				three geographical parts. Since California is so large, it's climate is quite variable across the state (i.e. the Southern part is hotter and
+				probably more sustainable for avocado farming than the Northern part.)
 			</p>
 
-			<div class="tableauPlaceholder" id="viz1760583314746" style="position: relative">
-				<noscript>
-					<a href="#">
-						<img
-							alt="Stack Overflow Survey Dashboard "
-							src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-2-dashboards&#47;StackOverflowSurveyDashboard&#47;1_rss.png"
-							style="border: none"
-						/>
-					</a>
-				</noscript>
-				<object class="tableauViz" style="display: none">
-					<param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-					<param name="embed_code_version" value="3" />
-					<param name="site_root" value="" />
-					<param name="name" value="project-2-dashboards&#47;StackOverflowSurveyDashboard" />
-					<param name="tabs" value="no" />
-					<param name="toolbar" value="yes" />
-					<param
-						name="static_image"
-						value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-2-dashboards&#47;StackOverflowSurveyDashboard&#47;1.png"
-					/>
-					<param name="animate_transition" value="yes" />
-					<param name="display_static_image" value="yes" />
-					<param name="display_spinner" value="yes" />
-					<param name="display_overlay" value="yes" />
-					<param name="display_count" value="yes" />
-					<param name="language" value="en-US" />
-					<param name="filter" value="publish=yes" />
-				</object>
-			</div>
-			<script type="text/javascript">
-				var divElement = document.getElementById('viz1760583314746');
-				var vizElement = divElement.getElementsByTagName('object')[0];
-				if (divElement.offsetWidth > 800) {
-					vizElement.style.minWidth = '420px';
-					vizElement.style.maxWidth = '650px';
-					vizElement.style.width = '100%';
-					vizElement.style.minHeight = '587px';
-					vizElement.style.maxHeight = '887px';
-					vizElement.style.height = divElement.offsetWidth * 0.75 + 'px';
-				} else if (divElement.offsetWidth > 500) {
-					vizElement.style.minWidth = '420px';
-					vizElement.style.maxWidth = '650px';
-					vizElement.style.width = '100%';
-					vizElement.style.minHeight = '587px';
-					vizElement.style.maxHeight = '887px';
-					vizElement.style.height = divElement.offsetWidth * 0.75 + 'px';
-				} else {
-					vizElement.style.width = '100%';
-					vizElement.style.height = '1227px';
-				}
-				var scriptElement = document.createElement('script');
-				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-				vizElement.parentNode.insertBefore(scriptElement, vizElement);
-			</script>
-
-			<h3>Audience</h3>
 			<p>
-				As mentioned in my <a href="./project-2/README.md">Technical Report</a>, this dashboard is for people who want an overview of developers' job
-				satisfaction and type of work location throughout the world.
+				<strong>A few questions I wanted to answer are below:</strong>
+				<ul>
+					<li>How does yield change over 40 years? Production?</li>
+					<li>What is the relationship between yield and production? Are avocados getting denser over time? Can they get denser?</li>
+					<li>What counties have produced avocados over 40 years? What counties haven't?</li>
+					<li>What does missing data mean?</li>
+				</ul>
+				
 			</p>
 
-			<h3>KPIs and Measures</h3>
+			<!-- <h3>Preprocessing</h3>
+			<pre> <code>
+avocados_df.rename(columns=lambda name: name.strip(), inplace=True)
+avocados_df['Unit'] = avocados_df['Unit'].apply(lambda unit: "Tons")
+avocados_df['Year'] = avocados_df['Year'].apply(lambda year: int(year))
+feature_names = avocados_df.columns
+print(f'Feature Names: {feature_names.values}')
+
+
+for feature in feature_names.values : 
+    avocados_df[feature] = avocados_df[feature].apply(lambda name: str(name).strip())
+    avocados_df.replace('', 0, inplace=True)
+    avocados_df.replace('San Luis Obisp', 'San Luis Obispo', inplace=True)
+    if feature in ['Harvested Acres', 'Yield', 'Production', 'Price P/U', 'Value'] :
+        avocados_df[feature] = avocados_df[feature].apply(lambda number: float(number))
+			</code></pre> -->
+
+			<h3>General Data</h3>
+			<img src="./images/california_yields.png" alt="Line plot of Yields of California Avocado Farms between 1980 and 2020" />
+			<p>The graph above shows a general upward trend in Avocado yields over 40 years. These are measured in tons. The average and range of the data for each year are represented by the solid blue line and translucent blue shading, respectively. Though there are dips over 40 years, the upward trend tells an interesting story, especially when you see our production trends shown below.</p>
+
+			<img src="./images/california_produced.png" alt="Line plot of number of avocados produced in California between 1980 and 2020" />
+			<p>With this graph, we only see a slight upward trend (and even some stagnance) in avocado production across all California counties. If we focus our eyes directly on the translucent shading (range of data), we can see the ebs and flows of the data.</p>
+			<p>What does this mean in relation to the yield? It may mean that our avocados are getting denser. There's <strong>more</strong> avocado per avocado. With more data, we could see if gene editing is a factor.</p>
 			<p>
-				<ol>
-					<li>Responders' Age</li>
-					<li>Responders' Location Type (Remote, In-Person, Hybrid, etc.) </li>
-					<li>Responders' Work Experience</li>
-				</ol>
+				Though the trend of avocado production seems stagnant, you can still see the correlation between the two features. Spikes and dips roughly match between the yield and production graphs.
+			</p>
+			<!-- <p>
+				Though the trend of avocado production seems stagnant, you can still see the relevance between the two features. Spikes and dips correlate
+				between the two plots. When yields increase, production often follows, and vice versa. This suggests that factors affecting avocado growth
+				impact both the quantity produced and the yield per acre. Below, we'll break up California Avocado production by geographical location and
+				County.
+			</p> -->
+			<h3>Geographic Splits</h3>
+            <p>Next up are some more Time Series for avocado growth in California, but split up by region.</p>
+			<img src="./images/north_cali.png" alt="Avocado Production line graph in Northern California" />
+			<p>Here, we see data for 3 counties in Northern California. A reminder about avocados: they need a hotter and wetter climate to grow.</p>
+			<p>Out of the 3 counties, only Monterey has kept up production for all 40 years and reached a maximum of over 1400 avocados. Not bad, but just keep scrolling.</p>
+			<img src="./images/central_cali.png" alt="Avocado Production line graph in Central California" />
+			<p>
+				We're looking a little better with Central California, though not every county here has data. San Luis Obispo appears to be the only county
+				with data for all 40 years. The maximum number of avocados produced is higher in Central California than in Northern California -- it's
+				getting hotter! And thus, the climate is getting better for growing avocados as we move further south.
+			</p>
+			<img src="./images/south_cali.png" alt="Avocado Production line graph in Southern California" />
+			<p>
+				Finally, we're in SoCal! We see data for 8 California counties here that immediately beat the production levels of the Northern and Central
+				counties. Our maximum number of avocados produced reached over 160,000 around 1985. Although there is a downtrend decade-over-decade, the
+				Southern part of the state still produces far more avocados. If I had more data and more time, I would explore why this data has seen a downward trend. Is environmental change making the climate too hot? Were there policy changes during the huge dips? Other events? 
 			</p>
 
-			<h3>Interactive Charts and Exploration Opportunities</h3>
-			<p></p>
-
-			<p>
-				Overall, avocado growth in California is interesting. Through this data, we discovered that specific parts of California are consistently
-				successful in growing avocados, and those avocados are potentially getting denser (leading to higher yields from the same production numbers).
-				We also can see how simple the data is through our time series.
-			</p>
+			<p>Overall, avocado growth in California is interesting. Through this data, we discovered that specific parts of California are consistently successful in growing avocados, and those avocados are potentially getting denser (leading to higher yields from the same production numbers). We also can see how simple the data is through our time series.</p>
 		</main>
 
 		<footer></footer>
