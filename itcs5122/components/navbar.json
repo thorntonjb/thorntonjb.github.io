@@ -10,5 +10,9 @@
 	{
 		"name": "Charting with Code",
 		"path": "./portfolio.html"
+	},
+	{
+		"name": "Dashboards",
+		"path": "./dashboard.html"
 	}
 ]
