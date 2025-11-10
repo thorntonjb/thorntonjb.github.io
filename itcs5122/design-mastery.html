@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Design Mastery</title>
+		<link rel="stylesheet" href="./styles/styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Visual Analytics, Project 3</h1>
+			<nav id="navbar"></nav>
+		</header>
+
+		<main>
+			<h2>Design Mastery Report</h2>
+			<h2>2025 Stack Overflow Survey Results</h2>
+
+			<p>
+				The Stack Overflow Developer Survey is an annual survey that gets information on developers from around the world. Results are available to
+				the public. This dashboard was created using that data.
+			</p>
+
+			<p></p>
+			<div class="tableauPlaceholder" id="viz1762737754381" style="position: relative">
+				<noscript>
+					<a href="#">
+						<img
+							alt=" "
+							src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-3-storytelling-mastery&#47;StackOverflowSurveyDashboard&#47;1_rss.png"
+							style="border: none"
+						/>
+					</a>
+				</noscript>
+				<object class="tableauViz" style="display: none">
+					<param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+					<param name="embed_code_version" value="3" />
+					<param name="site_root" value="" />
+					<param name="name" value="project-3-storytelling-mastery&#47;StackOverflowSurveyDashboard" />
+					<param name="tabs" value="yes" />
+					<param name="toolbar" value="yes" />
+					<param
+						name="static_image"
+						value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-3-storytelling-mastery&#47;StackOverflowSurveyDashboard&#47;1.png"
+					/>
+					<param name="animate_transition" value="yes" />
+					<param name="display_static_image" value="yes" />
+					<param name="display_spinner" value="yes" />
+					<param name="display_overlay" value="yes" />
+					<param name="display_count" value="yes" />
+					<param name="language" value="en-US" />
+				</object>
+			</div>
+
+			<script type="text/javascript">
+				var divElement = document.getElementById('viz1762737754381');
+				var vizElement = divElement.getElementsByTagName('object')[0];
+				if (divElement.offsetWidth > 800) {
+					vizElement.style.minWidth = '1293px';
+					vizElement.style.maxWidth = '100%';
+					vizElement.style.minHeight = '973px';
+					vizElement.style.maxHeight = divElement.offsetWidth * 0.75 + 'px';
+				} else if (divElement.offsetWidth > 500) {
+					vizElement.style.minWidth = '1293px';
+					vizElement.style.maxWidth = '100%';
+					vizElement.style.minHeight = '973px';
+					vizElement.style.maxHeight = divElement.offsetWidth * 0.75 + 'px';
+				} else {
+					vizElement.style.width = '100%';
+					vizElement.style.minHeight = '1200px';
+					vizElement.style.maxHeight = divElement.offsetWidth * 1.77 + 'px';
+				}
+
+				var scriptElement = document.createElement('script');
+				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+				vizElement.parentNode.insertBefore(scriptElement, vizElement);
+			</script>
+
+			<h3>Audience & Intent</h3>
+			<p>
+				As mentioned in my <a href="./project-3/README.md">Technical Report</a>, this dashboard is for people who want an overview of developers' job
+				satisfaction and type of work location throughout the world - now more accessible for people with colorblindness and more streamlined
+				story-telling capabilities.
+			</p>
+			<h3>Story & Structure</h3>
+			<p>
+				The story I want to tell ties job satisfaction with work location. What kind of connections can be made for software developers' work location
+				in Russia between age groups? This dashboard can help answer that question. The World Map at the bottom left of the dashboard provides the
+				foundation for the entire dashboard. Upon clicking a country, the rest of the dashboard updates to narrow the scope of the story to individual
+				countries.
+			</p>
+			<h3>Design Choices</h3>
+			<p>
+				I approached color with the intent of making this dashboard more accessible to people with colorblindness. To get rid of clutter, adding
+				functionality for the World Map to affect the entire dashboard allowed me to get rid of some legends/external filters that I did not need.
+				What perception or design principles guided these choices? Having more whitespace actually helps more aspects of a dashboard to stand out. I
+				chose a completely different color set for the World Map to have it stand out from the other visuals and indicate that it has filtering
+				capabilities for the dashboard.
+			</p>
+			<h3>Reflection</h3>
+			<p>
+				Working with Tableau Public Desktop was the greatest challenge for me. Eventually, I switched to the web version of Tableau Public to prevent
+				any more technical issues with the dataset (which is very large) in the future. The KPIs that I decided to focus on work very well together
+				and I believe my color choices between the three work well.
+				<br />
+				If I had more time, I would play around more with the colors and see what other KPIs I could integrate into the dashboard to give the most
+				information while staying away from overstimulating my users.
+			</p>
+			<h3>Access</h3>
+			<p>
+				The dashboard is imbedded above, and is also available on
+				<a href="https://public.tableau.com/shared/74TZFDTN5?:display_count=n&:origin=viz_share_link">Tableau Public</a>
+			</p>
+		</main>
+	</body>
+</html>
