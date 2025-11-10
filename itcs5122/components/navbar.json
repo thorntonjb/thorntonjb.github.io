@@ -14,5 +14,9 @@
 	{
 		"name": "Dashboards",
 		"path": "./dashboard.html"
+	},
+	{
+		"name": "Design Mastery",
+		"path": "./design-mastery.html"
 	}
 ]
